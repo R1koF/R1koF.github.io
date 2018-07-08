@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<style>
+.box2 {
+  background-color:#8ed664;
+}
+.box3
+ {
+  background-color:#d064d6;
+  width: 100px;
+  height: 100px;
+}
+</style>
+
+
+<body>
+
+<h1 class="first">こんにちは</h1>
+<button type="button" name="button" class="bt1">画像を表示</button>
+<h2 class="bt2">コンテンツを表示</h2>
+<h2 class="bt3">アニメーションさせる</h2>
+<div class="box3">box3</div>
+
+
+
+<p class="box2">ダミーテキストダミーテキストダミーテキストダミーテキスト
+ダミーテキストダミーテキストダミーテキストダミーテキスト
+ダミーテキストダミーテキストダミーテキストダミーテキスト
+ダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+<br>
+
+<img src="" alt="" class="img1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $(".first").css("color","#ff0000");
+    $(".first").click(function(){
+      $(this).css("color","#000000");
+      $(this).css("font-size","35px");
+    });
+
+    $(".bt1").click(function(){
+      $(".img1").attr("src","flower.jpg");
+    });
+    $(".bt2").click(function(){
+      $(".box2").slideToggle();
+    });
+
+    $(".bt3").click(function(){
+      $(".box3").animate({
+        marginLeft:"400px",
+        margiTop:"400px"
+      },600,"swing").animate({
+        width: "700px"
+      },500,"swing")
+    });
+  });
+
+</script>
+
+
+</body>
+</html>
